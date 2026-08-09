@@ -28,15 +28,18 @@ class Response extends Type
         return $this->_result;
     }
 
+    /**
+     * Telegram may return a Message object, or a scalar (True, Int, String)
+     * for methods like deleteMessage, getChatMembersCount, exportChatInviteLink.
+     *
+     * @param mixed $value
+     */
     public function setResult($value)
     {
-        //for was set webhook
-        // if (is_bool($value)) {
-        //     $this->_result = $value;
-        // } else {
-            
-        //     $this->_result = new Result($value);
-        // }
-        $this->_result = new Result($value);
+        if (!is_array($value) && !is_object($value)) {
+            $this->_result = $value;
+        } else {
+            $this->_result = new Result($value);
+        }
     }
 }
