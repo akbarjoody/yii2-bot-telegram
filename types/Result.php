@@ -44,7 +44,15 @@ class Result extends Type
 
    private $_forward_from;
 
+   private $_forward_from_chat;
+
+   public $forward_from_message_id;
+
+   public $forward_signature;
+
    public $forward_date;
+
+   public $forward_origin;
 
    private $_entities;
 
@@ -244,6 +252,21 @@ class Result extends Type
          $this->_forward_from = new ForwardFrom($value);
     }
 
+    /**
+     *
+     */
+    public function getForward_from_chat()
+    {
+         return $this->_forward_from_chat;
+    }
+
+    /**
+     *
+     */
+    public function setForward_from_chat($value): void
+    {
+         $this->_forward_from_chat = new Chat($value);
+    }
 
     /**
      * 

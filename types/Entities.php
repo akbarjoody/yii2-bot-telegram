@@ -12,11 +12,15 @@ class Entities extends Type
 {
     public $entities = [];
 
-    public function __construct($config)
+    public function __construct($config = [])
     {
-        foreach($config as $attribute)
-        {
-            $this->entities[] = new Entitie($attribute);
+        if (!is_array($config)) {
+            return;
+        }
+        foreach ($config as $attribute) {
+            if (is_array($attribute)) {
+                $this->entities[] = new Entitie($attribute);
+            }
         }
     }
 

@@ -11,11 +11,15 @@ class Photo extends Type
 {
     public $photoSize = [];
 
-    public function __construct($config)
+    public function __construct($config = [])
     {
-        foreach($config as $attribute)
-        {
-            $this->photoSize[] = new PhotoSize($attribute);
+        if (!is_array($config)) {
+            return;
+        }
+        foreach ($config as $attribute) {
+            if (is_array($attribute)) {
+                $this->photoSize[] = new PhotoSize($attribute);
+            }
         }
     }
 
