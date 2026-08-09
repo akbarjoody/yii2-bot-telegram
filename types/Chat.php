@@ -241,4 +241,21 @@ class Chat extends Type
     * Optional. For supergroups, the location to which the supergroup is connected. Returned only in getChat.
     */
     public $location;
+
+    /**
+     * Information about types of gifts that are accepted by the chat
+     * or by the corresponding user for private chats.
+     * @var aki\telegram\types\AcceptedGiftTypes|array
+     */
+    public $accepted_gift_types;
+
+    /**
+     * @param array|AcceptedGiftTypes $value
+     */
+    public function setAccepted_gift_types($value): void
+    {
+        $this->accepted_gift_types = $value instanceof AcceptedGiftTypes
+            ? $value
+            : new AcceptedGiftTypes($value);
+    }
 }
