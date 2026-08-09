@@ -18,6 +18,8 @@ Yii2 bot telegram
 >
 > This is the **official** repository of `aki/yii2-bot-telegram`.  
 > The project was originally published under the GitHub account [`akbarjoudi`](https://github.com/akbarjoudi/yii2-bot-telegram). That account is no longer accessible, so development and maintenance continue here under [`akbarjoody`](https://github.com/akbarjoody/yii2-bot-telegram).
+>
+> **Telegram Bot API:** aligned with [Bot API 10.2](https://core.telegram.org/bots/api-changelog#july-14-2026) (July 2026). See [CHANGELOG.md](CHANGELOG.md).
 
 [guide-ru](https://github.com/akbarjoody/yii2-bot-telegram/tree/master/docs/guide-ru) | [guide-fa](https://github.com/akbarjoody/yii2-bot-telegram/tree/master/docs/guide-fa)
 

@@ -1,18 +1,19 @@
 {
     "name": "aki/yii2-bot-telegram",
-    "description": "bot telegram",
+    "description": "Yii2 Telegram Bot API client (Bot API 10.2+)",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
+    "keywords": ["yii2", "extension", "telegram", "bot", "telegram-bot-api"],
     "license": "LGPL-3.0+",
     "authors": [
         {
             "name": "akbarjoudi",
-            "email": "akbar.joody@gmail.ocm"
+            "email": "akbar.joody@gmail.com"
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
-        "guzzlehttp/guzzle": "*",
+        "php": ">=7.4",
+        "yiisoft/yii2": "^2.0",
+        "guzzlehttp/guzzle": "^6.5|^7.0",
         "ext-json": "*"
     },
     "autoload": {

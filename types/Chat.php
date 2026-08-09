@@ -250,6 +250,18 @@ class Chat extends Type
     public $accepted_gift_types;
 
     /**
+     * Optional. Community this chat belongs to (Bot API 10.2). Returned only in getChat / ChatFullInfo.
+     * @var Community|array|null
+     */
+    public $community;
+
+    /**
+     * Optional. Guard bot for join request queries (Bot API 10.1)
+     * @var User|array|null
+     */
+    public $guard_bot;
+
+    /**
      * @param array|AcceptedGiftTypes $value
      */
     public function setAccepted_gift_types($value): void
@@ -257,5 +269,15 @@ class Chat extends Type
         $this->accepted_gift_types = $value instanceof AcceptedGiftTypes
             ? $value
             : new AcceptedGiftTypes($value);
+    }
+
+    /**
+     * @param array|Community $value
+     */
+    public function setCommunity($value): void
+    {
+        $this->community = $value instanceof Community
+            ? $value
+            : new Community($value);
     }
 }

@@ -1,14 +1,15 @@
 <?php
+
 namespace aki\telegram\types;
 
-
-use yii\base\Component;
+use aki\telegram\base\Type;
 
 /**
- * @author Akbar Joudi <akbar.joody@gmail.com>
  * This object represents a chat photo.
+ *
+ * @author Akbar Joudi <akbar.joody@gmail.com>
  */
-class ChatPhoto extends Component
+class ChatPhoto extends Type
 {
     public $small_file_id;
 
@@ -17,4 +18,4 @@ class ChatPhoto extends Component
     public $big_file_id;
 
     public $big_file_unique_id;
-}   
+}

@@ -32,22 +32,62 @@ php composer.phar require aki/yii2-bot-telegram "*"
 
 ## فهرست متدهای قابل استفاده
 
+کتابخانه با [Bot API 10.2](https://core.telegram.org/bots/api) هم‌تراز است. هر متد رسمی تلگرام را می‌توانید به‌صورت پویا صدا بزنید:
+
+```php
+Yii::$app->telegram->sendRichMessage([...]);
+Yii::$app->telegram->sendLivePhoto([...]);
+Yii::$app->telegram->editEphemeralMessageText([...]);
+```
+
+نمونه متدهای رایج:
+
 ```
 getMe
 sendMessage
+sendMessageDraft
+sendRichMessage
+sendRichMessageDraft
 forwardMessage
+forwardMessages
+copyMessage
+copyMessages
 sendPhoto
+sendLivePhoto
 sendAudio
 sendDocument
 sendSticker
 sendVideo
+sendAnimation
+sendVoice
+sendVideoNote
+sendPaidMedia
+sendMediaGroup
 sendLocation
+sendVenue
+sendContact
+sendPoll
+sendDice
 sendChatAction
+sendInvoice
+editMessageText
+editEphemeralMessageText
+deleteEphemeralMessage
+deleteMessage
+deleteMessages
+answerCallbackQuery
+answerInlineQuery
+answerGuestQuery
 getUserProfilePhotos
 getUpdates
 setWebhook
 getChat
 getChatAdministrators
+getChatMemberCount
+createForumTopic
+sendGift
+getUserGifts
+getChatGifts
 getChatMembersCount
 getChatMember
 answerCallbackQuery

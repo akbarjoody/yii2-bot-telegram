@@ -23,6 +23,30 @@ class Message extends Type
     public $message_id;
 
     /**
+     * Optional. Unique identifier of a message thread / forum topic
+     * @var Integer
+     */
+    public $message_thread_id;
+
+    /**
+     * Optional. True if the message is sent to a forum topic
+     * @var Boolean
+     */
+    public $is_topic_message;
+
+    /**
+     * Optional. Unique identifier of an ephemeral message (Bot API 10.2)
+     * @var Integer|String
+     */
+    public $ephemeral_message_id;
+
+    /**
+     * Optional. User who can see an ephemeral message (Bot API 10.2)
+     * @var User|array
+     */
+    public $receiver_user;
+
+    /**
      * Optional. Sender, empty for messages sent to channels
      * @var From
      */
@@ -150,6 +174,18 @@ class Message extends Type
      * @var array of aki\telegram\types\PhotoSize
      */
     public $photo;
+
+    /**
+     * Optional. Message is a live photo (Bot API 10.0)
+     * @var LivePhoto|array
+     */
+    public $live_photo;
+
+    /**
+     * Optional. Rich formatted message content (Bot API 10.1)
+     * @var array
+     */
+    public $rich_message;
 
     /**
      * Optional. Message is a sticker, information about the sticker
@@ -366,7 +402,94 @@ class Message extends Type
     public $giveaway_winners;
 
     public $giveaway_completed;
-    
+
+    /** @var array|null Guest mode caller user (Bot API 10.0) */
+    public $guest_bot_caller_user;
+
+    /** @var array|null Guest mode caller chat (Bot API 10.0) */
+    public $guest_bot_caller_chat;
+
+    /** @var string|null Guest query id (Bot API 10.0) */
+    public $guest_query_id;
+
+    /** @var array|null Community chat added (Bot API 10.2) */
+    public $community_chat_added;
+
+    /** @var array|null Community chat removed (Bot API 10.2) */
+    public $community_chat_removed;
+
+    /** @var string|null Member tag shown with the sender (Bot API 9.5) */
+    public $sender_tag;
+
+    /** @var Integer|null */
+    public $reply_to_poll_option_id;
+
+    /** @var array|null */
+    public $poll_option_added;
+
+    /** @var array|null */
+    public $poll_option_deleted;
+
+    /** @var array|null */
+    public $chat_owner_left;
+
+    /** @var array|null */
+    public $chat_owner_changed;
+
+    /** @var array|null */
+    public $managed_bot_created;
+
+    /** @var array|null */
+    public $gift_upgrade_sent;
+
+    /** @var Boolean|null */
+    public $has_protected_content;
+
+    /** @var Boolean|null */
+    public $is_automatic_forward;
+
+    /** @var array|null */
+    public $external_reply;
+
+    /** @var array|null */
+    public $quote;
+
+    /** @var array|null */
+    public $reply_to_story;
+
+    /** @var array|null */
+    public $via_bot;
+
+    /** @var Boolean|null */
+    public $has_media_spoiler;
+
+    /** @var array|null */
+    public $checklist;
+
+    /** @var array|null */
+    public $checklist_tasks_done;
+
+    /** @var array|null */
+    public $checklist_tasks_added;
+
+    /** @var Integer|null */
+    public $sender_boost_count;
+
+    /** @var array|null */
+    public $sender_business_bot;
+
+    /** @var string|null */
+    public $business_connection_id;
+
+    /** @var Boolean|null */
+    public $is_from_offline;
+
+    /** @var array|null */
+    public $effect_id;
+
+    /** @var array|null */
+    public $show_caption_above_media;
+
     /**
      * 
      */

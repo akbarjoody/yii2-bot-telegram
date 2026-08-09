@@ -11,6 +11,8 @@ use aki\telegram\base\Type;
  * InputMediaAudio
  * InputMediaPhoto
  * InputMediaVideo
+ * InputMediaLivePhoto
+ * InputMediaVoiceNote
  */
 class InputMedia extends Type{
     public $media;

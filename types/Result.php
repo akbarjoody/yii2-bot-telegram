@@ -76,6 +76,18 @@ class Result extends Type
    
    public $is_topic_message;
 
+   /** @var LivePhoto|array|null Bot API 10.0 */
+   public $live_photo;
+
+   /** @var array|null Bot API 10.1 */
+   public $rich_message;
+
+   /** @var Integer|string|null Bot API 10.2 */
+   public $ephemeral_message_id;
+
+   /** @var User|array|null Bot API 10.2 */
+   public $receiver_user;
+
    /**
     * 
     */
