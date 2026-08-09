@@ -14,7 +14,12 @@ Yii2 bot telegram
 [![Daily Downloads](https://poser.pugx.org/aki/yii2-bot-telegram/d/daily)](//packagist.org/packages/aki/yii2-bot-telegram)
 </p>
 
-[guide-ru](https://github.com/akbarjoudi/yii2-bot-telegram/tree/master/docs/guide-ru)
+> **Author / Maintainer:** [Akbar Joudi](https://github.com/akbarjoody) (`aki`)
+>
+> This is the **official** repository of `aki/yii2-bot-telegram`.  
+> The project was originally published under the GitHub account [`akbarjoudi`](https://github.com/akbarjoudi/yii2-bot-telegram). That account is no longer accessible, so development and maintenance continue here under [`akbarjoody`](https://github.com/akbarjoody/yii2-bot-telegram).
+
+[guide-ru](https://github.com/akbarjoody/yii2-bot-telegram/tree/master/docs/guide-ru)
 
 Create your first bot
 ------------
