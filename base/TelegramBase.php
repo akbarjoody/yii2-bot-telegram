@@ -109,8 +109,8 @@ class TelegramBase extends Component
                 $file = fopen($item, 'rb');
                 $is_resource |= is_resource($file);
                 $multipart[] = ['name' => $key, 'contents' => $file];
+                continue; // already attached as resource; do not also send the raw path
             }
-
 
             $multipart[]  = ['name' => $key, 'contents' => $item];
         }
