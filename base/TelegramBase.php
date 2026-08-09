@@ -100,7 +100,7 @@ class TelegramBase extends Component
         }
 
         //Reformat data array in multipart way if it contains a resource
-        $attachments = ['photo', 'sticker', 'audio', 'document', 'video', 'voice', 'animation', 'video_note', 'thumb'];
+        $attachments = ['photo', 'sticker', 'audio', 'document', 'video', 'voice', 'animation', 'video_note', 'thumb', 'thumbnail'];
         foreach ($params as $key => $item) {
             if ($key === 'media') {
                 // Magical media input helper.

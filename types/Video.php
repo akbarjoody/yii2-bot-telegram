@@ -23,6 +23,8 @@ class Video extends Type
 
     public $thumb;
 
+    public $thumbnail;
+
     public $mime_type;
 
     public $file_size;

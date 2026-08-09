@@ -15,6 +15,8 @@ class Document extends Type
 
     private $_thumb;
 
+    private $_thumbnail;
+
     public $file_name;
 
     public $mime_type;
@@ -29,5 +31,15 @@ class Document extends Type
     public function setThumb($value)
     {
         $this->_thumb = new PhotoSize($value);
+    }
+
+    public function getThumbnail()
+    {
+        return $this->_thumbnail;
+    }
+
+    public function setThumbnail($value)
+    {
+        $this->_thumbnail = new PhotoSize($value);
     }
 }

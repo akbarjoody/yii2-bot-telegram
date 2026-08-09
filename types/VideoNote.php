@@ -20,5 +20,7 @@ class VideoNote extends Type
 
     public $thumb;
 
+    public $thumbnail;
+
     public $file_size;
 }

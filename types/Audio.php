@@ -26,4 +26,6 @@ class Audio extends Type
     public $file_size;
 
     public $thumb;
+
+    public $thumbnail;
 }

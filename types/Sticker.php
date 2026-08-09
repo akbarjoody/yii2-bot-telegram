@@ -25,6 +25,8 @@ class Sticker extends Type
 
     private $_thumb;
 
+    private $_thumbnail;
+
     /**
      * 
      */
@@ -38,7 +40,17 @@ class Sticker extends Type
      */
     public function setThumb($value)
     {
-         $this->_thumb = new Sticker($value);
+         $this->_thumb = new PhotoSize($value);
+    }
+
+    public function getThumbnail()
+    {
+        return $this->_thumbnail;
+    }
+
+    public function setThumbnail($value)
+    {
+        $this->_thumbnail = new PhotoSize($value);
     }
     
 }
